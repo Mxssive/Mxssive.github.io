@@ -1,0 +1,277 @@
+:root {
+    --primary: #d4a762;
+    --dark: #333;
+    --light: #f9f9f9;
+}
+/* Definierar grundläggande färgvariabler som kan återanvändas */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Nollställer margin och padding för alla element och sätter box-sizing till border-box */
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+/* Grundläggande styling för body: typsnitt, färg, radavstånd och döljer horisontell scroll */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+/* Navbar styling: flexlayout, fast position, genomskinlig bakgrund och skugga */
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.3s;
+}
+/* Styling för logotypen: storlek, färg, övergångseffekt */
+
+.logo:hover {
+    transform: scale(1.05);
+    color: #c09555;
+}
+/* Hover-effekt för logotypen: liten förstoring och färgändring */
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+/* Layout för navigationslänkar: flexbox och tar bort listpunkter */
+
+.nav-links li {
+    margin-left: 2rem;
+}
+/* Mellanrum mellan navigationslänkar */
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+/* Styling för navigationslänkar: tar bort understreck, färg, fetstil och övergång */
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+/* Hover-effekt för navigationslänkar: färgändring */
+
+.cta {
+    background: var(--primary);
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+/* Extra styling för CTA-knapp (Contact): bakgrundsfärg, padding och rundade hörn */
+
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    color: white;
+}
+/* Hero-sektion: full höjd, bakgrundsbild med overlay, centrerat innehåll */
+
+.hero-text {
+    max-width: 600px;
+}
+/* Begränsar bredden på hero-texten */
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+/* Styling för huvudrubrik i hero-sektion: storlek och marginal */
+
+.hero-text h1 span {
+    color: var(--primary);
+}
+/* Färg för del av huvudrubrik */
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+/* Styling för undertext i hero-sektion: storlek, marginal och genomskinlighet */
+
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+/* Grundläggande knappstyling: layout, färg, padding och övergångar */
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+/* Hover-effekt för knappar: lyfter upp och lägger till skugga */
+
+.section {
+    padding: 6rem 5%;
+}
+/* Generell sektionsstyling: padding */
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+}
+/* Styling för sektionsrubriker: storlek, centrering och position */
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--primary);
+}
+/* Dekorativ linje under sektionsrubriker */
+
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+/* Grid-layout för tour-kort: anpassar antal kolumner, mellanrum */
+
+.tour-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+/* Styling för varje tour-kort: bakgrund, rundade hörn, skugga och övergång */
+
+.tour-card:hover {
+    transform: translateY(-10px);
+}
+/* Hover-effekt för tour-kort: lyfter upp */
+
+.tour-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+/* Styling för bilderna i tour-kort: fast höjd och bakgrundsbildposition */
+
+.tour-card h3 {
+    padding: 1rem 1rem 0.5rem;
+    font-size: 1.3rem;
+}
+/* Styling för rubriker i tour-kort: padding och storlek */
+
+.tour-card p {
+    padding: 0 1rem;
+    color: #666;
+}
+/* Styling för text i tour-kort: padding och färg */
+
+.price {
+    display: block;
+    padding: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+/* Styling för pris i tour-kort: layout, fetstil och färg */
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--dark);
+    color: white;
+}
+/* Styling för sidfot: centrerat innehåll, bakgrundsfärg och textfärg */
+
+#topButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 99;
+    transition: opacity 0.3s;
+}
+/* Styling för "till toppen"-knappen: position, utseende och initialt dold */
+
+#topButton:hover {
+    background-color: #c09555;
+    opacity: 0.9;
+}
+/* Hover-effekt för "till toppen"-knappen: färgändring och genomskinlighet */
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 60%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    /* Mobilmeny: fullhöjdsmeny som glider in från höger */
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+    /* Visar mobilmenyn när den är aktiv */
+
+    .nav-links li {
+        margin: 1.5rem 0;
+    }
+    /* Mellanrum mellan länkar i mobilmeny */
+
+    .burger {
+        display: block;
+    }
+    /* Visar burgermeny-ikonen för mobila enheter */
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    /* Mindre rubrikstorlek för mobila enheter */
+}
