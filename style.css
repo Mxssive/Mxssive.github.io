@@ -275,3 +275,15 @@ footer {
     }
     /* Mindre rubrikstorlek för mobila enheter */
 }
+
+#giraffe {
+    background-image: url('images/giraffe.jpg')
+}
+
+#zebra {
+background-image: url(Images/Zebra.jpg);
+}
+
+#leopard { 
+    background-image: url(Images/mammal-animal-leopard-nature-preview.jpg);
+}
